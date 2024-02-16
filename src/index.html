@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fantasy Baseball Assistant</title>
+    <link rel="stylesheet" href="/src/styles/main.css" />
+  </head>
+  <body>
+    <div id="title">WELCOME</div>
+    <div id="content">
+      <div id="analyzer">
+        <div id="analyzer-title">PROJECTIONS</div>
+        <div id="analyzer-grid-container">
+          <div class="grid-item">
+            <div class="grid-player-content grid-player-num">#</div>
+            <div class="grid-player-content grid-player-name grid-headers">
+              Name
+            </div>
+            <div class="grid-player-content grid-player-stats grid-headers">
+              Team
+            </div>
+            <div class="grid-player-content grid-player-stats grid-headers">
+              G
+            </div>
+            <div class="grid-player-content grid-player-stats grid-headers">
+              AB
+            </div>
+            <div
+              class="grid-player-content grid-player-stats grid-headers rotocat"
+            >
+              R
+            </div>
+            <div
+              class="grid-player-content grid-player-stats grid-headers rotocat"
+            >
+              HR
+            </div>
+            <div
+              class="grid-player-content grid-player-stats grid-headers rotocat"
+            >
+              RBI
+            </div>
+            <div
+              class="grid-player-content grid-player-stats grid-headers rotocat"
+            >
+              SB
+            </div>
+            <div
+              class="grid-player-content grid-player-stats grid-headers rotocat"
+            >
+              AVG
+            </div>
+            <div
+              class="grid-player-content grid-player-stats grid-headers rotocat"
+            >
+              OBP
+            </div>
+            <div
+              class="grid-player-content grid-player-stats grid-headers zackval"
+            >
+              $VAL
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="lineup-container">
+        <div id="lineup-title">LINEUP</div>
+        <div id="lineup-roster">
+          <div class="lineup-item">
+            <div class="lineup-item-content lineup-item-value">$20</div>
+            <div class="lineup-item-content lineup-item-position">C</div>
+            <div class="lineup-item-content lineup-item-player">
+              Logan O'Hoppe
+            </div>
+            <div class="lineup-item-content lineup-item-stat">R</div>
+            <div class="lineup-item-content lineup-item-stat">HR</div>
+            <div class="lineup-item-content lineup-item-stat">RBI</div>
+            <div class="lineup-item-content lineup-item-stat">SB</div>
+            <div class="lineup-item-content lineup-item-stat">AVG</div>
+            <div class="lineup-item-content lineup-item-stat">OBP</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/src/js/index.js"></script>
+  </body>
+</html>
