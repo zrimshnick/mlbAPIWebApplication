@@ -79,27 +79,117 @@ body {
   color: black;
 }
 
+/// lineup
 #lineup-container {
   width: 400px;
   background-color: lightgray;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #lineup-title {
-  padding-bottom: 4rem;
+  padding-bottom: 1rem;
 }
 
+#lineup-position-creator-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+#lineup-position-creator {
+  background-color: green;
+  //width: 160px;
+  //margin-bottom: 1rem;
+  border-radius: 10px;
+  //border: black 1px solid;
+  color: white;
+  padding: 4px 8px 4px 8px;
+  font-size: 14px;
+  //font-weight: bold;
+}
+#lineup-position-creator:hover {
+  cursor: pointer;
+}
 .lineup-roster {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   align-items: center;
 }
+.lineup-item-container {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+.lineup-position {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 100%;
+  width: 40px;
+  border-radius: 50%;
+  border: black 1px solid;
+}
+.lineup-position-toggle {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  font-weight: bold;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+.lineup-position-toggle.minus {
+  bottom: 40%;
+  left: 0%;
+}
+.lineup-position-toggle.plus {
+  bottom: 40%;
+  right: 0%;
+}
+
+.lineup-position:hover {
+  .lineup-position-toggle {
+    //display: flex;
+    opacity: 1;
+  }
+  .lineup-position-toggle:hover {
+    cursor: pointer;
+  }
+}
+
+#minus {
+  background-color: rgb(255, 109, 109);
+}
+#plus {
+  background-color: rgb(81, 149, 81);
+}
 .lineup-item {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 2px;
+  align-items: center;
+  background-color: white;
+  gap: 8px;
+  height: 100%;
+  border-radius: 8px;
+  padding: 0px 4px 0px 4px;
+  border: black 1px solid;
 }
 .lineup-item-content {
-  font-size: 20px;
+  background-color: yellow;
+  font-size: 16px;
 }

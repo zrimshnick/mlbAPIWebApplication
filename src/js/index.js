@@ -82,3 +82,74 @@ document.addEventListener("DOMContentLoaded", async function () {
     console.error("An error occurred:", error);
   }
 });
+
+document.getElementById("minus").addEventListener("click", function () {
+  // Get the element you want to remove
+  console.log("clicked");
+  var elementToRemove = document.getElementById("lineup1");
+  elementToRemove.remove();
+});
+
+document
+  .getElementById("lineup-position-creator")
+  .addEventListener("click", function () {
+    // add html
+    console.log("clicked");
+    var dropdown = document.getElementById("lineup-position-creator-dropdown");
+    var selectedValue = dropdown.value;
+
+    // Create new lineup item container
+    var lineupItemContainer = document.createElement("div");
+    lineupItemContainer.classList.add("lineup-item-container");
+    lineupItemContainer.id = "lineup1"; // You can set dynamic ID based on some condition
+
+    // Create lineup position div
+    var lineupPosition = document.createElement("div");
+    lineupPosition.classList.add("lineup-position");
+
+    // Create minus and plus buttons
+    var minusButton = document.createElement("div");
+    minusButton.classList.add("lineup-position-toggle", "minus");
+    minusButton.textContent = "-";
+
+    var plusButton = document.createElement("div");
+    plusButton.classList.add("lineup-position-toggle", "plus");
+    plusButton.textContent = "+";
+
+    // Append buttons to lineup position div
+    lineupPosition.appendChild(minusButton);
+    lineupPosition.appendChild(document.createTextNode(selectedValue));
+    lineupPosition.appendChild(plusButton);
+
+    // Create lineup item div
+    var lineupItem = document.createElement("div");
+    lineupItem.classList.add("lineup-item");
+
+    // Create lineup item content divs
+    var lineupItemContents = [
+      "Aaron Judge",
+      "R",
+      "HR",
+      "RBI",
+      "SB",
+      "AVG",
+      "OBP",
+      "$20",
+    ];
+
+    lineupItemContents.forEach(function (content) {
+      var lineupItemContent = document.createElement("div");
+      lineupItemContent.classList.add("lineup-item-content");
+      lineupItemContent.textContent = content;
+      lineupItem.appendChild(lineupItemContent);
+    });
+
+    // Append lineup position and lineup item to lineup item container
+    lineupItemContainer.appendChild(lineupPosition);
+    lineupItemContainer.appendChild(lineupItem);
+
+    // Get the output container
+    var outputContainer = document.getElementById("lineup-roster");
+    // Append the new lineup item container to the output container
+    outputContainer.appendChild(lineupItemContainer);
+  });
