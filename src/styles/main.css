@@ -11,8 +11,8 @@ body {
 
 #title {
   text-align: center;
-  margin-top: 50px;
-  font-size: 4rem;
+  margin-top: 20px;
+  font-size: 2rem;
   padding-bottom: 2rem;
 }
 
@@ -86,7 +86,7 @@ body {
 }
 
 #lineup-container {
-  width: 400px;
+  width: 440px;
   background-color: lightgray;
   text-align: center;
   display: flex;
@@ -119,6 +119,43 @@ body {
   cursor: pointer;
 }
 
+.lineup-header-container {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+  width: 420px;
+  padding-bottom: 5px;
+}
+
+.lineup-header-blankleft {
+  width: 48px;
+}
+
+.lineup-header-player {
+  width: 34%;
+}
+
+.lineup-header-stats-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 8px;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  padding: 0px 4px 0px 4px;
+}
+
+.lineup-header-stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 8px;
+}
+
 .lineup-roster {
   display: flex;
   flex-direction: column;
@@ -133,6 +170,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 40px;
+  width: 420px;
+  padding-bottom: 5px;
 }
 
 .lineup-position {
@@ -163,11 +202,22 @@ body {
 .lineup-position-toggle.minus {
   bottom: 40%;
   left: 0%;
+  min-width: 35%;
+  background-color: rgb(255, 109, 109);
 }
 
 .lineup-position-toggle.plus {
   bottom: 40%;
   right: 0%;
+  min-width: 35%;
+  background-color: rgb(81, 149, 81);
+}
+
+.pos {
+  align-self: center;
+  height: 20px;
+  width: 20px;
+  opacity: 1;
 }
 
 .lineup-position:hover .lineup-position-toggle {
@@ -177,28 +227,30 @@ body {
   cursor: pointer;
 }
 
-#minus {
-  background-color: rgb(255, 109, 109);
-}
-
-#plus {
-  background-color: rgb(81, 149, 81);
-}
-
 .lineup-item {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color: white;
   gap: 8px;
   height: 100%;
+  width: 100%;
   border-radius: 8px;
   padding: 0px 4px 0px 4px;
   border: black 1px solid;
 }
 
+.lineup-item-player {
+  width: 35%;
+  transition: all 0.1s ease-in-out;
+}
+
+.lineup-item-player:hover {
+  cursor: pointer;
+  color: rgb(35, 45, 234);
+}
+
 .lineup-item-content {
-  background-color: yellow;
   font-size: 16px;
 }/*# sourceMappingURL=main.css.map */

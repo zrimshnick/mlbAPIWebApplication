@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/src/styles/main.css" />
   </head>
   <body>
-    <div id="title">WELCOME</div>
+    <div id="title">Fantasy Baseball Assistant</div>
     <div id="content">
       <div id="analyzer">
         <div id="analyzer-title">PROJECTIONS</div>
@@ -83,28 +83,21 @@
 
           <div id="lineup-position-creator">+</div>
         </div>
-
-        <div id="lineup-roster">
-          <div class="lineup-item-container" id="lineup1">
-            <div class="lineup-position">
-              <div class="lineup-position-toggle minus" id="minus">-</div>
-              C
-              <div class="lineup-position-toggle plus" id="plus">+</div>
-            </div>
-            <div class="lineup-item">
-              <div class="lineup-item-content lineup-item-player">
-                Logan O'Hoppe
-              </div>
-              <div class="lineup-item-content lineup-item-stat">R</div>
-              <div class="lineup-item-content lineup-item-stat">HR</div>
-              <div class="lineup-item-content lineup-item-stat">RBI</div>
-              <div class="lineup-item-content lineup-item-stat">SB</div>
-              <div class="lineup-item-content lineup-item-stat">AVG</div>
-              <div class="lineup-item-content lineup-item-stat">OBP</div>
-              <div class="lineup-item-content lineup-item-value">$20</div>
-            </div>
+        <div class="lineup-header-container">
+          <div class="lineup-header-blankleft"></div>
+          <div class="lineup-header-stats-container">
+            <div class="lineup-header-player">Player</div>
+            <div class="lineup-header-stats">R</div>
+            <div class="lineup-header-stats">HR</div>
+            <div class="lineup-header-stats">RBI</div>
+            <div class="lineup-header-stats">SB</div>
+            <div class="lineup-header-stats">AVG</div>
+            <div class="lineup-header-stats">OBP</div>
+            <div class="lineup-header-stats">Val</div>
           </div>
         </div>
+
+        <div id="lineup-roster"></div>
       </div>
     </div>
 

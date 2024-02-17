@@ -83,12 +83,30 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
 });
 
-document.getElementById("minus").addEventListener("click", function () {
-  // Get the element you want to remove
-  console.log("clicked");
-  var elementToRemove = document.getElementById("lineup1");
-  elementToRemove.remove();
-});
+// function generateUniqueId(prefix) {
+//   return prefix + Math.random().toString(36).substr(2, 9);
+// }
+// Example usage:
+//var uniqueId = generateUniqueId("lineup-");
+//console.log(uniqueId); // Output: lineup-abc123
+
+document
+  .getElementById("lineup-roster")
+  .addEventListener("click", function (event) {
+    if (event.target.classList.contains("minus")) {
+      event.target.closest(".lineup-item-container").remove();
+    }
+  });
+
+document
+  .getElementById("lineup-roster")
+  .addEventListener("click", function (event) {
+    if (event.target.classList.contains("lineup-item-player")) {
+      /// new trigger player search
+      console.log("playyer clciked");
+      //event.target.classList.add("hidden");
+    }
+  });
 
 document
   .getElementById("lineup-position-creator")
@@ -101,7 +119,7 @@ document
     // Create new lineup item container
     var lineupItemContainer = document.createElement("div");
     lineupItemContainer.classList.add("lineup-item-container");
-    lineupItemContainer.id = "lineup1"; // You can set dynamic ID based on some condition
+    //lineupItemContainer.id = "lineup1"; // You can set dynamic ID based on some condition
 
     // Create lineup position div
     var lineupPosition = document.createElement("div");
@@ -126,20 +144,26 @@ document
     lineupItem.classList.add("lineup-item");
 
     // Create lineup item content divs
-    var lineupItemContents = [
-      "Aaron Judge",
-      "R",
-      "HR",
-      "RBI",
-      "SB",
-      "AVG",
-      "OBP",
-      "$20",
-    ];
+    var lineupItemContents = ["Player here", " ", " ", " ", " ", " ", " ", " "];
 
-    lineupItemContents.forEach(function (content) {
+    lineupItemContents.slice(0, 1).forEach(function (content) {
       var lineupItemContent = document.createElement("div");
       lineupItemContent.classList.add("lineup-item-content");
+      lineupItemContent.classList.add("lineup-item-player");
+      lineupItemContent.textContent = content;
+      lineupItem.appendChild(lineupItemContent);
+    });
+    lineupItemContents.slice(1, 7).forEach(function (content) {
+      var lineupItemContent = document.createElement("div");
+      lineupItemContent.classList.add("lineup-item-content");
+      lineupItemContent.classList.add("lineup-item-stat");
+      lineupItemContent.textContent = content;
+      lineupItem.appendChild(lineupItemContent);
+    });
+    lineupItemContents.slice(-1).forEach(function (content) {
+      var lineupItemContent = document.createElement("div");
+      lineupItemContent.classList.add("lineup-item-content");
+      lineupItemContent.classList.add("lineup-item-value");
       lineupItemContent.textContent = content;
       lineupItem.appendChild(lineupItemContent);
     });
