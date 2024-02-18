@@ -83,6 +83,12 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
 });
 
+document
+  .getElementById("sign-out-button")
+  .addEventListener("click", function () {
+    window.location.href = "signin.html";
+  });
+
 // function generateUniqueId(prefix) {
 //   return prefix + Math.random().toString(36).substr(2, 9);
 // }

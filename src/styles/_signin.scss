@@ -1,0 +1,14 @@
+.sign-in-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
+  gap: 4px;
+}
+
+#emailInput,
+#passwordInput {
+  width: 300px;
+  height: 20px;
+}

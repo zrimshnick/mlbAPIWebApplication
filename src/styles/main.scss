@@ -1,4 +1,4 @@
-/* You can write your styles here */
+@import "_signin";
 
 body {
   font-family: Tahoma, sans-serif;
@@ -9,11 +9,27 @@ body {
   display: none;
 }
 
+#navbar {
+  display: flex;
+  flex-direction: row;
+}
 #title {
   text-align: center;
   margin-top: 20px;
   font-size: 2rem;
   padding-bottom: 2rem;
+  width: 40%;
+}
+#navbar-right {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 40px;
+}
+#sign-out-button {
+  //text-align: right;
 }
 
 #content {

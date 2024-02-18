@@ -2,12 +2,15 @@
   "name": "mlbapiwebapplication",
   "version": "1.0.0",
   "description": "A web app for making fantasy baseball analysis easier",
-  "main": "src/index.html",
+  "main": "src/html/index.html",
   "type": "module",
   "scripts": {
     "start": "node start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Zack Rimshnick",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^10.8.0"
+  }
 }
